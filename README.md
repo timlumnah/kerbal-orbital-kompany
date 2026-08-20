@@ -1,5 +1,11 @@
 # KoKo — Kerbal Orbital Kompany
 
+> **⚠ Beta / work in progress.** KoKo is playable and the core campaign loop
+> works end-to-end, but this is not a finished, polished release. Expect
+> rough edges, at least one known-broken feature (see **Known Limitations**),
+> active renaming/reorganization, and breaking changes between versions
+> without much warning. Back up your saves before installing.
+
 ## Overview
 
 A KSP1 career-mode overhaul that turns the stock sandbox into a persistent
