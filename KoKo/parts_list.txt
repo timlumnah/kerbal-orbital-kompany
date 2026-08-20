@@ -1,0 +1,21 @@
+parts_list.txt
+
+RCS mini
+"C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Utility\rcsBlockRV-105_v2\RCSblock_01_small.cfg"
+
+
+Engine
+Vector: "C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Engine\liquidEngineSSME\SSME.cfg"
+Ant: "C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Engine\liquidEngineLV-1_v2\liquidEngineLV-1_v2.cfg"
+Spider: "C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Engine\liquidEngineLV-1_v2\liquidEngineLV-1R _v2.cfg"
+Vernor: "C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Utility\linearVernorRCS\vernorEngine.cfg"
+
+Drone Core
+"C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Command\probeStackLarge\probeStackLarge.cfg"
+
+
+Comms Dish
+Communotron: "C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Utility\commDish88-88\commDish88-88.cfg"
+RA-100: "C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\GameData\Squad\Parts\Utility\RelayAntennas\RA-100.cfg"
+
+RTG

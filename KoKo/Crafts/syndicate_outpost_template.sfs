@@ -1,0 +1,1203 @@
+VESSEL
+{
+	pid = 507750def00e429fa2189573d04cc404
+	persistentId = 1526330561
+	name = Untitled Space Craft
+	type = Ship
+	sit = PRELAUNCH
+	landed = True
+	skipGroundPositioning = False
+	skipGroundPositioningForDroppedPart = False
+	vesselSpawning = False
+	launchedFrom = LaunchPad
+	landedAt = LaunchPad
+	displaylandedAt = #autoLOC_6002112
+	splashed = False
+	met = 0
+	lct = 10.879999999999857
+	lastUT = 10.879999999999857
+	distanceTraveled = 0
+	root = 0
+	lat = -0.097207798280253485
+	lon = -74.557675005922988
+	alt = 73.009608709951863
+	hgt = 0.552274585
+	nrm = -2.17556953E-06,1.00000012,2.2649765E-06
+	rot = -0.700989723,-0.0922207683,-0.0972641036,0.700463057
+	CoM = 0,0,0
+	stg = 0
+	prst = False
+	ref = 1507677223
+	ctrl = True
+	PQSMin = 2
+	PQSMax = 10
+	GroupOverride = 0
+	OverrideDefault = False,False,False,False
+	OverrideActionControl = 0,0,0,0
+	OverrideAxisControl = 0,0,0,0
+	OverrideGroupNames = ,,,
+	altDispState = ASL
+	cPch = 0.3340001
+	cHdg = 0.7419999
+	cMod = 0
+	ORBIT
+	{
+		SMA = 300818.8578891143
+		ECC = 0.9947985103709982
+		INC = 0.097207798532158676
+		LPE = 90.004124728487312
+		LAN = 105.61995907258824
+		MNA = 3.1415927187441408
+		EPH = 10.879999999999857
+		REF = 1
+	}
+	PART
+	{
+		name = mk1-3pod
+		cid = 4294490784
+		uid = 1507677223
+		mid = 1750125515
+		persistentId = 2361551268
+		launchID = 1
+		parent = 0
+		position = 0,0,0
+		rotation = 0,0,0,1
+		mirror = 1,1,1
+		symMethod = Radial
+		istg = -1
+		resPri = 0
+		dstg = 0
+		sqor = -1
+		sepI = -1
+		sidx = -1
+		attm = 0
+		sameVesselCollision = False
+		srfN = , -1
+		attN = bottom, -1
+		attN = top, -1
+		mass = 2.5999999
+		shielded = False
+		temp = 312.67118783144497
+		tempExt = 312.74686388337648
+		tempExtUnexp = 312.74682265806848
+		staticPressureAtm = 0.98922740786627961
+		expt = 0.5
+		state = 0
+		PreFailState = 0
+		attached = True
+		autostrutMode = Off
+		rigidAttachment = False
+		flag = Squad/Flags/minimalistic
+		rTrf = _default
+		modCost = 0
+		modMass = 0
+		moduleVariantName = 
+		moduleCargoStackableQuantity = 1
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleSameVesselInteraction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			SetSameVesselInteraction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+			RemoveSameVesselInteraction
+			{
+				actionGroup = None
+				wasActiveBeforePartWasAdjusted = False
+			}
+		}
+		PARTDATA
+		{
+		}
+		MODULE
+		{
+			name = ModuleCommand
+			isEnabled = True
+			hibernation = False
+			hibernateOnWarp = False
+			activeControlPointName = _default
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				MakeReferenceToggle
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				HibernateToggle
+				{
+					actionGroup = None
+					active = False
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleReactionWheel
+			isEnabled = True
+			actuatorModeCycle = 0
+			authorityLimiter = 100
+			stateString = Idle
+			stagingEnabled = True
+			WheelState = Active
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				CycleAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				Activate
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				Deactivate
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				Toggle
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleColorChanger
+			isEnabled = True
+			animState = False
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				ToggleAction
+				{
+					actionGroup = Light
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleScienceExperiment
+			isEnabled = True
+			Deployed = False
+			Inoperable = False
+			cooldownToGo = 0
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				DeployAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				ResetAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleScienceContainer
+			isEnabled = True
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				CollectAllAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = FlagDecal
+			isEnabled = True
+			flagDisplayed = True
+			isMirrored = False
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleConductionMultiplier
+			isEnabled = True
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleDataTransmitter
+			isEnabled = True
+			xmitIncomplete = False
+			stagingEnabled = True
+			canComm = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				StartTransmissionAction
+				{
+					actionGroup = None
+					active = False
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleProbeControlPoint
+			isEnabled = True
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleLiftingSurface
+			isEnabled = True
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleRCSFX
+			isEnabled = True
+			rcsEnabled = True
+			thrustPercentage = 100
+			currentShowToggles = False
+			enableYaw = True
+			enablePitch = True
+			enableRoll = True
+			enableX = True
+			enableY = True
+			enableZ = True
+			useThrottle = False
+			fullThrust = False
+			stagingEnabled = False
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				ToggleAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleInventoryPart
+			isEnabled = True
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			STOREDPARTS
+			{
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = MechJebCore
+			isEnabled = True
+			running = True
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+				OnOrbitProgradeAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnOrbitRetrogradeAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnOrbitNormalAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnOrbitAntinormalAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnOrbitRadialInAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnOrbitRadialOutAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnKillRotationAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnDeactivateSmartASSAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnLandsomewhereAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnLandTargetAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnPanicAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnTranslatronOffAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnTranslatronKeepVertAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnTranslatronZeroSpeedAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnTranslatronPlusOneSpeedAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnTranslatronMinusOneSpeedAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnTranslatronToggleHSAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+				OnAscentAPToggleAction
+				{
+					actionGroup = None
+					wasActiveBeforePartWasAdjusted = False
+				}
+			}
+			MechJebLocalSettings
+			{
+				MechJebModuleMenu
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAirplaneAutopilot
+				{
+					HeadingHoldEnabled = False
+					AltitudeHoldEnabled = False
+					VertSpeedHoldEnabled = False
+					RollHoldEnabled = False
+					SpeedHoldEnabled = False
+					AltitudeTarget = 0
+					HeadingTarget = 90
+					RollTarget = 0
+					SpeedTarget = 0
+					VertSpeedTarget = 0
+					BankAngle = 30
+					unlockParts = 
+					unlockTechs = 
+					AccKp
+					{
+						ValConfig = 0.5
+						TextConfig = 0.5
+					}
+					AccKi
+					{
+						ValConfig = 0.5
+						TextConfig = 0.5
+					}
+					AccKd
+					{
+						ValConfig = 0.0050000000000000001
+						TextConfig = 0.005
+					}
+					PitKp
+					{
+						ValConfig = 2
+						TextConfig = 2
+					}
+					PitKi
+					{
+						ValConfig = 1
+						TextConfig = 1
+					}
+					PitKd
+					{
+						ValConfig = 0.0050000000000000001
+						TextConfig = 0.005
+					}
+					RolKp
+					{
+						ValConfig = 0.5
+						TextConfig = 0.5
+					}
+					RolKi
+					{
+						ValConfig = 0.02
+						TextConfig = 0.02
+					}
+					RolKd
+					{
+						ValConfig = 0.5
+						TextConfig = 0.5
+					}
+					YawKp
+					{
+						ValConfig = 1
+						TextConfig = 1
+					}
+					YawKi
+					{
+						ValConfig = 0.25
+						TextConfig = 0.25
+					}
+					YawKd
+					{
+						ValConfig = 0.02
+						TextConfig = 0.02
+					}
+					YawLimit
+					{
+						ValConfig = 10
+						TextConfig = 10
+					}
+					RollLimit
+					{
+						ValConfig = 45
+						TextConfig = 45
+					}
+					PitchDownLimit
+					{
+						ValConfig = 15
+						TextConfig = 15
+					}
+					PitchUpLimit
+					{
+						ValConfig = 25
+						TextConfig = 25
+					}
+				}
+				MechJebModuleAirplaneGuidance
+				{
+					showpid = False
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAscentClassicAutopilot
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAscentClassicPathMenu
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAscentMenu
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAscentPVGAutopilot
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAscentPVGSettingsMenu
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAscentSettings
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAscentSettingsMenu
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAttitudeAdjustment
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleCustomWindowEditor
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleDebugArrows
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleDockingAutopilot
+				{
+					forceRol = False
+					overrideSafeDistance = False
+					overrideTargetSize = False
+					unlockParts = 
+					unlockTechs = 
+					rol
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+				}
+				MechJebModuleDockingGuidance
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleInfoItems
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleLandingAutopilot
+				{
+					DeployGears = True
+					DeployChutes = True
+					RCSAdjustment = True
+					unlockParts = 
+					unlockTechs = 
+					TouchdownSpeed
+					{
+						ValConfig = 0.5
+						TextConfig = 0.5
+					}
+					LimitGearsStage
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+					LimitChutesStage
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+				}
+				MechJebModuleLandingGuidance
+				{
+					_landingSiteIdx = 0
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleLandingPredictions
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleManeuverPlanner
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleStageStats
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleNodeEditor
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleNodeExecutor
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleGuidanceController
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleRCSBalancerWindow
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleRendezvousAutopilot
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleRendezvousAutopilotWindow
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleRendezvousGuidance
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleRoverController
+				{
+					ControlHeading = False
+					ControlSpeed = False
+					BrakeOnEject = False
+					BrakeOnEnergyDepletion = False
+					WarpToDaylight = False
+					StabilityControl = False
+					LimitAcceleration = False
+					unlockParts = 
+					unlockTechs = 
+					heading
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+					speed
+					{
+						ValConfig = 10
+						TextConfig = 10
+					}
+				}
+				MechJebModuleRoverWindow
+				{
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleSettings
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleSmartASS
+				{
+					mode = ORBITAL
+					target = OFF
+					advReference = INERTIAL
+					advDirection = FORWARD
+					forceRol = False
+					forcePitch = True
+					forceYaw = True
+					unlockParts = 
+					unlockTechs = start
+					srfHdg
+					{
+						ValConfig = 90
+						TextConfig = 90
+					}
+					srfPit
+					{
+						ValConfig = 90
+						TextConfig = 90
+					}
+					srfRol
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+					srfVelYaw
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+					srfVelPit
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+					srfVelRol
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+					rol
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+				}
+				MechJebModuleSmartRcs
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleSpaceplaneAutopilot
+				{
+					bBreakAsSoonAsLanded = False
+					unlockParts = 
+					unlockTechs = 
+					glideslope
+					{
+						ValConfig = 2.5
+						TextConfig = 2.5
+					}
+					approachSpeed
+					{
+						ValConfig = 80
+						TextConfig = 80
+					}
+					touchdownSpeed
+					{
+						ValConfig = 60
+						TextConfig = 60
+					}
+					maximumSafeBankAngle
+					{
+						ValConfig = 25
+						TextConfig = 25
+					}
+				}
+				MechJebModuleSpaceplaneGuidance
+				{
+					runwayIndex = 0
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleSpinupController
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleSuicideTimer
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleTargetController
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleThrustWindow
+				{
+					autostageSavedState = False
+					unlockParts = 
+					unlockTechs = start
+				}
+				MechJebModuleTranslatron
+				{
+					unlockParts = 
+					unlockTechs = start
+					trans_spd
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+				}
+				MechJebModuleWarpHelper
+				{
+					unlockParts = 
+					unlockTechs = start
+					phaseAngle
+					{
+						ValConfig = 0
+						TextConfig = 0
+					}
+				}
+				MechJebModuleWaypointWindow
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleWaypointHelpWindow
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				ModExtensionDemo
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModulePVGGlueBall
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleCustomInfoWindow
+				{
+				}
+				MechJebModuleWarpController
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleDeployableAntennaController
+				{
+					prev_shouldDeploy = False
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleSolarPanelController
+				{
+					prev_shouldDeploy = False
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleThrustController
+				{
+					LimitThrottle = False
+					LimiterMinThrottle = True
+					ElectricThrottle = False
+					unlockParts = 
+					unlockTechs = 
+					MaxThrottle
+					{
+						ValConfig = 1
+						TextConfig = 100
+					}
+					MinThrottle
+					{
+						ValConfig = 0.050000000000000003
+						TextConfig = 5
+					}
+					ElectricThrottleLo
+					{
+						ValConfig = 0.050000000000000003
+						TextConfig = 5
+					}
+					ElectricThrottleHi
+					{
+						ValConfig = 0.14999999999999999
+						TextConfig = 15
+					}
+				}
+				MechJebModuleRCSController
+				{
+					unlockParts = 
+					unlockTechs = 
+					Tf
+					{
+						ValConfig = 1
+						TextConfig = 1
+					}
+					Kp
+					{
+						ValConfig = 0.125
+						TextConfig = 0.125
+					}
+					Ki
+					{
+						ValConfig = 0.070000000000000007
+						TextConfig = 0.07
+					}
+					Kd
+					{
+						ValConfig = 0.53000000000000003
+						TextConfig = 0.53
+					}
+				}
+				MechJebModuleRCSBalancer
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleAttitudeController
+				{
+					unlockParts = 
+					unlockTechs = 
+					MJAttitudeController
+					{
+					}
+					KosAttitudeController
+					{
+					}
+					HybridController
+					{
+					}
+					BetterController
+					{
+					}
+					LQRController
+					{
+					}
+				}
+				MechJebModuleStagingController
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleFlightRecorder
+				{
+					MarkUT = 10.879999999999857
+					DeltaVExpended = 0
+					DragLosses = 0
+					GravityLosses = 0
+					SteeringLosses = 0
+					MarkLAN = 105.62086093779612
+					MarkLatitude = -0.097207799431474312
+					MarkLongitude = -74.557675876207981
+					MarkAltitude = 73.009609389386611
+					MarkBodyIndex = 1
+					MaxDragGees = 0
+					unlockParts = 
+					unlockTechs = 
+				}
+				MechJebModuleFlightRecorderGraph
+				{
+					unlockParts = 
+					unlockTechs = 
+				}
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleProximityRefueler
+			isEnabled = True
+			isSource = False
+			transferRange = 100
+			infiniteFuel = False
+			resourceNames = LiquidFuel,Oxidizer,MonoPropellant,ElectricCharge,XenonGas,Ore
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		MODULE
+		{
+			name = ModuleTripLogger
+			isEnabled = True
+			stagingEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+			Log
+			{
+				flight = 0
+			}
+			UPGRADESAPPLIED
+			{
+			}
+		}
+		RESOURCE
+		{
+			name = ElectricCharge
+			amount = 150
+			maxAmount = 150
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = MonoPropellant
+			amount = 30
+			maxAmount = 30
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+	}
+	ACTIONGROUPS
+	{
+		Stage = False, 0
+		Gear = False, 0
+		Light = False, 0
+		RCS = False, 0
+		SAS = False, 0
+		Brakes = False, 0
+		Abort = False, 0
+		Custom01 = False, 0
+		Custom02 = False, 0
+		Custom03 = False, 0
+		Custom04 = False, 0
+		Custom05 = False, 0
+		Custom06 = False, 0
+		Custom07 = False, 0
+		Custom08 = False, 0
+		Custom09 = False, 0
+		Custom10 = False, 0
+	}
+	DISCOVERY
+	{
+		state = -1
+		lastObservedTime = 0
+		lifetime = Infinity
+		refTime = Infinity
+		size = 2
+	}
+	FLIGHTPLAN
+	{
+	}
+	CTRLSTATE
+	{
+		pitch = 0
+		yaw = 0
+		roll = 0
+		trimPitch = 0
+		trimYaw = 0
+		trimRoll = 0
+		mainThrottle = 0
+	}
+	VESSELMODULES
+	{
+		FlightIntegrator
+		{
+		}
+		AxisGroupsModule
+		{
+		}
+		SuspensionLoadBalancer
+		{
+		}
+		CommNetVessel
+		{
+			controlState = KerbalFull
+			canComm = True
+		}
+	}
+}

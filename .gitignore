@@ -1,0 +1,44 @@
+# Build outputs
+bin/
+obj/
+*.pdb
+*.mdb
+*.exe
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+
+# Unity generated folders
+Library/
+Temp/
+Logs/
+UserSettings/
+
+# KSP local install noise
+KSP_x64_Data/
+KSP_Data/
+Saves/
+Ships/
+Screenshots/
+
+**/scripts/
+logs/
+scrots/
+Refs/
+/devnotes/
+KoKo/Plugins/*.dll
+KoKo/Plugins/*.pdb
+
+# OS
+.DS_Store
+Thumbs.db
+
+ksp_mod_instructions.txt
+ksp_mod_spec.md

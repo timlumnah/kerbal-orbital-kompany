@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  KoKo.csproj
+
+  BUILD SETUP (Linux / Mono):
+    msbuild KoKo.csproj /p:Configuration=Release
+
+  BUILD SETUP (Windows / Visual Studio):
+    Open in VS, build normally.
+
+  KSP REFERENCES:
+    Option A — set env var pointing at your KSP install root:
+      export KSPDIR="/home/you/.steam/steamapps/common/Kerbal Space Program"
+    Option B — copy required DLLs into a local Refs/ folder:
+      Refs/Assembly-CSharp.dll
+      Refs/UnityEngine.dll
+      Refs/UnityEngine.CoreModule.dll
+      Refs/UnityEngine.IMGUIModule.dll
+      Refs/Contracts.dll
+    DLLs live at: <KSP install>/KSP_Data/Managed/
+-->
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- ── Core properties ── -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Koko</RootNamespace>
+    <AssemblyName>KoKo</AssemblyName>
+    <!--
+         Dropped from v4.7.2 — only v4.5 available on this build box.
+         KSP runs on Mono 4.x so v4.5 is fine for the actual runtime.
+    -->
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <Nullable>disable</Nullable>
+    <!--
+         Point at Mono's local framework assemblies so dotnet SDK doesn't look
+         for the Windows .NET Framework targeting pack (not available on Linux).
+    -->
+    <FrameworkPathOverride>/usr/lib/mono/4.5/</FrameworkPathOverride>
+  </PropertyGroup>
+
+  <!-- ── KSP reference path resolution ── -->
+  <PropertyGroup>
+    <!-- Prefer KSPDIR env var; fall back to local Refs/ folder -->
+    <KSPDir Condition="'$(KSPDir)' == '' and '$(KSPDIR)' != ''">$(KSPDIR)</KSPDir>
+    <KSPManagedDir Condition="'$(KSPDir)' != ''">$(KSPDir)/KSP_Data/Managed</KSPManagedDir>
+    <KSPManagedDir Condition="'$(KSPDir)' == ''">Refs</KSPManagedDir>
+  </PropertyGroup>
+
+  <!-- ── Debug config ── -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin/Debug/</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <!-- ── Release config ── -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin/Release/</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <!-- ── KSP / Unity references ── -->
+  <ItemGroup>
+    <!-- KSP main assembly -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(KSPManagedDir)/Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <!-- Unity core -->
+    <Reference Include="UnityEngine">
+      <HintPath>$(KSPManagedDir)/UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(KSPManagedDir)/UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <!-- Unity IMGUI (OnGUI, GUILayout) -->
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(KSPManagedDir)/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <!--
+         Added two Unity module DLLs needed by JsonUtility and Input.
+    -->
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>$(KSPManagedDir)/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(KSPManagedDir)/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- AudioSource, AudioClip, AudioListener (required by SyndicateHUD)    -->
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(KSPManagedDir)/UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+    <!--
+         Contracts.dll removed — contract suppression not needed for playtest.
+         ContractSuppressor.cs and DisableAllStockContracts() still compile
+         if Assembly-CSharp.dll contains those types; otherwise strip later.
+    -->
+    <!-- <Reference Include="Contracts">
+      <HintPath>$(KSPManagedDir)/Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference> -->
+  </ItemGroup>
+
+  <!-- ── Source files ── -->
+  <ItemGroup>
+    <Compile Include="src/Business.cs" />
+    <Compile Include="src/BusinessManager.cs" />
+    <Compile Include="src/FacilityBootstrap.cs" />
+    <Compile Include="src/SalaryManager.cs" />
+    <Compile Include="src/CareerBootstrap.cs" />
+    <Compile Include="src/CareerOverride.cs" />
+    <Compile Include="src/ContractSuppressor.cs" />
+    <Compile Include="src/DeliveryManager.cs" />
+    <Compile Include="src/DeliveryRecord.cs" />
+    <Compile Include="src/FacilityDestroyer.cs" />
+    <Compile Include="src/LogisticsMain.cs" />
+    <Compile Include="src/LogisticsScenario.cs" />
+    <Compile Include="src/ModuleStealth.cs" />
+    <Compile Include="src/ModuleProximityRefueler.cs" />
+    <Compile Include="src/ProximityTrigger.cs" />
+    <Compile Include="src/RandomPartExplosion.cs" />
+    <Compile Include="src/Route.cs" />
+    <Compile Include="src/ModuleWeapon.cs" />
+    <Compile Include="src/WeaponManager.cs" />
+    <Compile Include="src/SyndicateHUD.cs" />
+    <Compile Include="src/CampaignScenario.cs" />
+    <Compile Include="src/CampaignDialogue.cs" />
+    <Compile Include="src/ModuleKamikazeWeapon.cs" />
+    <Compile Include="src/ModuleForceField.cs" />
+    <Compile Include="src/ModuleBusinessType.cs" />
+    <Compile Include="src/SyndicateBootstrap.cs" />
+    <Compile Include="src/SyndicateManager.cs" />
+    <Compile Include="src/SyndicateMapOverlay.cs" />
+    <Compile Include="src/SyndicateScenario.cs" />
+    <Compile Include="src/TargetingManager.cs" />
+    <Compile Include="src/TransportVehicle.cs" />
+    <Compile Include="src/ModuleSyndicateTelescope.cs" />
+    <Compile Include="src/ModuleSyndicateCraft.cs" />
+    <Compile Include="src/LaunchDestinationManager.cs" />
+    <!-- Excluded: console test harness, not for KSP build -->
+    <!-- <Compile Include="src/Program.cs" /> -->
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)/Microsoft.CSharp.targets" />
+
+</Project>
