@@ -1,4 +1,4 @@
-# KoKo — Kerbal Orbital Kompany
+# KoKo | Kerbal Orbital Kompany
 
 > **⚠ Beta / work in progress.** KoKo is playable and the core campaign loop
 > works end-to-end, but this is not a finished, polished release. Expect
@@ -8,8 +8,8 @@
 
 ## Overview
 
-A KSP1 career-mode overhaul that turns the stock sandbox into a persistent
-geopolitical, logistical, and military simulation.
+KoKo is a gameplay overhaul mod for Kerbal Space Program that turns the stock
+sandbox into a persistent geopolitical, logistical, and military simulation.
 
 The player operates inside a living world: establish off-world businesses and
 logistics networks, scout and destroy Syndicate installations scattered across
@@ -34,10 +34,10 @@ it's shared under a permissive license specifically so it can be borrowed from.
 
 # How KoKo Compares to Other Mods
 
-KoKo isn't trying to replace the mods below — most of them solve a different
+KoKo doesn't attempt to replace the mods below; most of them solve a different
 problem, and several are worth running alongside it.
 
-- **[BDArmory](https://github.com/PapaJoesSoup/BDArmory)** — BDArmory is a
+- **[BDArmory](https://github.com/PapaJoesSoup/BDArmory)**: BDArmory is a
   full weapons/combat simulation with real projectile physics and detailed
   models. KoKo's weapon system is deliberately the opposite: a lightweight
   on-rails abstraction (travel time = distance / speed, no physics sim) that
@@ -47,37 +47,37 @@ problem, and several are worth running alongside it.
   the roadmap (see below), and until then the two mods just coexist fine
   side by side.
 
-- **Contract packs** — KoKo replaces contracts almost entirely
+- **Contract packs**: KoKo replaces contracts almost entirely
   (`ContractSuppressor` disables stock contracts on save start) in favor of a
   single ongoing story arc: find and destroy the Syndicate before the Eeloo
   Fortress completes. If you find contract packs tedious busywork, this is
   the alternative.
 
-- **Parts mods (Future Tech, OPT, etc.)** — KoKo is not a parts mod and isn't
+- **Parts mods (Future Tech, OPT, etc.)**: KoKo is not a parts mod and isn't
   meant to compete with one. Its "custom" parts are almost all `+PART[]`
   ModuleManager clones of stock parts with tuned stats — lightweight and
   arcade-feeling (e.g. near-infinite ISP on RCS thrusters) rather than a new
   art/model pipeline. Full part mods are complementary, not redundant.
 
-- **[Realism Overhaul](https://github.com/KSP-RO/RealismOverhaul)** — the
+- **[Realism Overhaul](https://github.com/KSP-RO/RealismOverhaul)**: the
   opposite design goal. KoKo intentionally loosens physics/economy realism
   (free tech unlocks, boosted science transmit, instant proximity refueling)
   in favor of pace and story momentum. Running both together will fight each
   other.
 
-- **[TAC Life Support](https://github.com/KSP-RO/TacLifeSupport)** —
+- **[TAC Life Support](https://github.com/KSP-RO/TacLifeSupport)**:
   intentionally not implemented in KoKo; the mod is about logistics, business,
   and covert ops, not survival management. The two are complementary — KoKo
   doesn't touch life support at all, so TACLS can be layered on top.
 
-- **Kerbal Konstructs** — KoKo's business-outpost system does some of the
+- **Kerbal Konstructs**: KoKo's business-outpost system does some of the
   same job (a qualifying vessel becomes a persistent, useful base you can
   launch to directly via the Operations UI's Launch-To tab) without needing
   custom static models — but it's also less immersive; there's no persistent
   visual structure, just game-state tracking on a vessel. If you want visual
   bases, KK is still the better tool and the two aren't mutually exclusive.
 
-- **[USI / MKS](https://github.com/UmbraSpaceIndustries/MKS)** — USI's
+- **[USI / MKS](https://github.com/UmbraSpaceIndustries/MKS)**: USI's
   colonization system is much deeper and more detail-oriented than KoKo's:
   dedicated Kerbal specialties, life-support-driven habitation limits,
   inflatable structures, and real production chains. KoKo's business system
@@ -87,7 +87,7 @@ problem, and several are worth running alongside it.
   reading its docs, not hands-on use, so take it as a starting point rather
   than gospel.)*
 
-- **MechJeb** — recommended, not competing. All MechJeb modules are unlocked
+- **MechJeb**: recommended, not competing. All MechJeb modules are unlocked
   from the start (`Configs/mechjeb.cfg`) specifically because KoKo assumes
   you're flying a lot of routine logistics/scouting runs and autopilot cuts
   the tedium.
@@ -104,8 +104,8 @@ multiple outcomes — a non-linear story engine — without a rewrite.
 
 # How to Build
 
-**Requirements (devbox):**
-- Ubuntu (tested on 24.04)
+**Requirements:**
+- Built and tested on Ubuntu 24.02 and Windows 11
 - `dotnet-sdk-8.0`
 - KSP reference DLLs in `Refs/` (copy from `KSP_Data/Managed/` on your own KSP
   install — **not included in this repo**, since they're Squad/Take-Two's
