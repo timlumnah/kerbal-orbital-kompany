@@ -35,6 +35,7 @@ Refs/
 /devnotes/
 KoKo/Plugins/*.dll
 KoKo/Plugins/*.pdb
+/*.zip
 
 # OS
 .DS_Store
